@@ -7,16 +7,14 @@ import './App.css'
 
 export default React.createClass ({
 
-	/*getInitialState: function(){
+	getInitialState: function(){
 		return{
 			album: Images.filter(function(value){
-				return Number(value.album) === undefined
-			}
+				return value.cover === true
+			})
 		}
 	},
-	if(Images.album === undefined){
-		return Images.album
-	},*/
+	
 
 	render: function (){
 		return(
@@ -26,10 +24,10 @@ export default React.createClass ({
 				</div>
 				<div>
 					<ul>
-						{Images.map(function(album){
+						{this.state.album.map(function(album){
         			return <li key={'id' + album.id}>
         						 	 <div className='albums'>
-                					<Link to={'/album/' + album.album}><img id={album.album} src={album.medium + album.img} alt='#'/></Link>
+                					<Link to={'/album/' + album.album}><img id={album.cover} src={album.medium + album.img} alt='#'/>Album {album.album}</Link>
                 			 </div>
                    	 </li>
              })}

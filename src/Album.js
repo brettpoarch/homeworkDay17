@@ -12,6 +12,13 @@ export default React.createClass ({
 			}.bind(this))
 		}
 	},
+	componentWillReceiveProps: function(){
+		this.setState({
+			album: Images.filter(function(value){
+				return Number(value.album) === Number(this.props.match.params.id)
+			}.bind(this))
+		})
+	},
 
 	render: function (){
 		return(
