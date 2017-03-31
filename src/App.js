@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter, Route } from 'react-router-dom'
+import Album from './Album'
+import Home from './Home'
+import Picture from './Picture'
+import './App.css'
 
-class App extends Component {
-  render() {
+export default React.createClass ({
+  render: function (){
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <BrowserRouter>
+        <div>
+          <Route exact={true} path='/' component={Home} />
+          <Route exact={true} path='/album/:id' component={Album} />
+          <Route path='/album/picture/:id' component={Picture} />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      </BrowserRouter>
+    )
   }
-}
-
-export default App;
+})
