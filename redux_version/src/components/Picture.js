@@ -1,7 +1,7 @@
 import React from 'react'
-import Images from './Images.json'
+import Images from '../images.json'
 //import {Link} from 'react-router-dom'
-import './App.css'
+import '../assets/styles/App.css'
 
 export default React.createClass ({
 
@@ -24,10 +24,9 @@ export default React.createClass ({
 				<div>
 					<h1>PHOTO {this.state.photo.id}</h1>
 				</div>
-				<div className='divImg'>
-					<img className='singlePic' id={this.state.photo.album} src={this.state.photo.large + this.state.photo.img} alt='#'/>
+				<div>
+					<img id={this.state.photo.album} src={this.state.photo.large + this.state.photo.img} alt='#'/>
 				</div>
-				<footer></footer>
 			</div>
 		)
 	}

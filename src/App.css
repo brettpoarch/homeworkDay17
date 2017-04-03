@@ -1,0 +1,45 @@
+html {box-sizing:border-box;}
+
+*, *:before, *:after {box-sizing:inherit}	
+
+body{
+	margin: 0;
+}
+
+h1{
+	height: 150px;
+	background: black;
+	color: white;
+	margin: 0;
+	line-height: 150px;
+	padding-left: 450px;
+	font-size: 45px;
+}
+
+.albums{
+	width: 175px;
+}
+
+li{
+	list-style: none;
+}
+
+ul{
+	display: flex;
+}
+
+.singlePic{
+	margin: 1px 275px;
+}
+footer{
+	height: 150px;
+	background: black;
+	margin-bottom: 0px;
+}
+.divImg{
+	margin-bottom:-4px;
+}
+.body{
+	margin: 0;
+	height: 426px;
+}
