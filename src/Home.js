@@ -22,7 +22,7 @@ export default React.createClass ({
 				<div>
 					<h1>MY ALBUMS</h1>
 				</div>
-				<div>
+				<div className='body'>
 					<ul>
 						{this.state.album.map(function(album){
         			return <li key={'id' + album.id}>
@@ -33,6 +33,7 @@ export default React.createClass ({
              })}
 					</ul>
 				</div>
+				<footer></footer>
 			</div>
 		)
 	}

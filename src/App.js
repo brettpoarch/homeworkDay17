@@ -11,8 +11,8 @@ export default React.createClass ({
       <BrowserRouter>
         <div>
           <Route exact={true} path='/' component={Home} />
-          <Route exact={true} path='/album/:id' component={Album} />
-          <Route path='/album/picture/:id' component={Picture} />
+          <Route path='/album/:id' component={Album} />
+          <Route path='/picture/:id' component={Picture} />
         </div>
       </BrowserRouter>
     )

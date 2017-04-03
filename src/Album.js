@@ -12,11 +12,11 @@ export default React.createClass ({
 			}.bind(this))
 		}
 	},
-	componentDidUpdate: function(){
+	componentWillReceiveProps: function(props){
 		this.setState({
 			album: Images.filter(function(value){
-				return Number(value.album) === Number(this.props.match.params.id)
-			}.bind(this))
+				return Number(value.album) === Number(props.match.params.id)
+			})
 		})
 	},
 
@@ -42,7 +42,7 @@ export default React.createClass ({
 						{this.state.album.map(function(album){
 	        			return <li key={'id' + album.id} id={album.id}>
 	        						 	 <div className='albums'>
-	                					<Link to={"/album/picture/" + album.id }><img id={album.id} src={album.medium + album.img} alt='#'/></Link>
+	                					<Link to={"/picture/" + album.id }><img id={album.id} src={album.medium + album.img} alt='#'/></Link>
 	                			 </div>
 	                   	 </li>
 	             })}
